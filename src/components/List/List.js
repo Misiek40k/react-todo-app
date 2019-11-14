@@ -8,7 +8,7 @@ export default class List extends Component {
     render() {
         return (
             <section className={styles.component}>
-                <Hero/>
+                <Hero />
             </section>
         )
     }
