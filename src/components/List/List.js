@@ -20,6 +20,10 @@ export default class List extends Component {
         description: settings.defaultListDescription,
     }
 
+    state = {
+        columns: this.props.columns || [],
+    }
+
     render() {
         return (
             <section className={styles.component}>
