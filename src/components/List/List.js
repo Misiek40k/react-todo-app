@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 
 import Hero from '../Hero/Hero';
+import Column from '../Column/Column';
 
 import styles from './List.scss'
 
@@ -24,6 +25,11 @@ export default class List extends Component {
                 <Hero titleText={this.props.title} heroImgSrc={this.props.heroImg} />
                 <div className={styles.description}>
                     {this.props.children}
+                </div>
+                <div className={styles.columns}>
+                    <Column title='Animals' />
+                    <Column title='Plants' />
+                    <Column title='Minerals' />
                 </div>
             </section>
         )
