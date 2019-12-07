@@ -11,7 +11,10 @@ class App extends React.Component {
         <h1 className={styles.title}>My React Todo App</h1>
         <h2 className={styles.subtitle}>with lists, columns and cards</h2>
 
-        <List title={['Things to do ', <sup key='1'>soon!</sup>]}/>
+        <List
+          title={['Things to do ', <sup key='1'>soon!</sup>]}
+          heroImg='http://uploads.kodilla.com/bootcamp/fer/11.react/space.png'
+        />
       </main>
     )
   }

@@ -10,6 +10,7 @@ export default class List extends Component {
 
     static propTypes = {
         title: PropTypes.node.isRequired,
+        heroImg: PropTypes.string.isRequired,
         children: PropTypes.node,
     }
 
@@ -20,7 +21,7 @@ export default class List extends Component {
     render() {
         return (
             <section className={styles.component}>
-                <Hero titleText={this.props.title} />
+                <Hero titleText={this.props.title} heroImgSrc={this.props.heroImg} />
                 <div className={styles.description}>
                     {this.props.children}
                 </div>
