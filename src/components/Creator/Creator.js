@@ -9,6 +9,7 @@ import Button from '../Button/Button';
 export default class Creator extends Component {
   static propTypes = {
     text: PropTypes.string,
+    action: PropTypes.func,
   }
 
   static defaultProps = {
@@ -29,7 +30,7 @@ export default class Creator extends Component {
   }
 
   handleOK() {
-    if (this.state.value != '') {
+    if (this.state.value !== '') {
       this.props.action(this.state.value);
       this.setState({
         value: '',
