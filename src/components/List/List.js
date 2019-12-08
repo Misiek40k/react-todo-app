@@ -32,9 +32,9 @@ export default class List extends Component {
                     {this.props.description}
                 </div>
                 <div className={styles.columns}>
-                    <Column title='Animals' />
-                    <Column title='Plants' />
-                    <Column title='Minerals' />
+                    {this.state.columns.map(({ key, ...columnProps }) => (
+                        <Column key={key} {...columnProps} />
+                    ))}
                 </div>
             </section>
         )
