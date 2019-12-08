@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react'
 import PropTypes from 'prop-types';
 
 import styles from './Creator.scss';
@@ -62,5 +62,3 @@ export default class Creator extends Component {
     );
   }
 }
-
-export default Creator;

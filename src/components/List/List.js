@@ -4,6 +4,7 @@ import { settings } from '../../data/dataStore';
 
 import Hero from '../Hero/Hero';
 import Column from '../Column/Column';
+import Creator from '../Creator/Creator';
 
 import styles from './List.scss'
 
