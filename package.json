@@ -10,11 +10,11 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "lint-staged --relative"
     }
   },
   "lint-staged": {
-    "/src/**/*.js": "eslint"
+    "src/**/*.js": "eslint"
   },
   "keywords": [],
   "author": "",
