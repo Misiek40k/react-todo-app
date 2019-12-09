@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types';
+import { settings } from '../../data/dataStore';
 
 import styles from './Creator.scss';
 
@@ -40,10 +41,12 @@ export default class Creator extends Component {
   }
 
   handleCancel() {
-    this.setState({
-      value: '',
-      visibleButtons: false
-    });
+    if (window.confirm(settings.deleteCreatorText)) {
+      this.setState({
+        value: '',
+        visibleButtons: false
+      });
+    }
   }
 
   render() {
