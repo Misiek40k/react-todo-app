@@ -50,11 +50,11 @@ export default class List extends Component {
                 </div>
                 <div className={styles.columns}>
                     {this.state.columns.map(({ key, ...columnProps }) => (
-                        <Column key={key} {...columnProps} />
+                        <Column key={key} {...columnProps}/>
                     ))}
                 </div>
                 <div className={styles.creator}>
-                    <Creator text={settings.columnCreatorText} action={title => this.addColumn(title)} />
+                    <Creator text={settings.cardCreatorText} action={title => this.addColumn(title)} />
                 </div>
             </section>
         )
