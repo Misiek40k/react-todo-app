@@ -4,6 +4,7 @@ import { settings } from '../../data/dataStore';
 
 import Card from '../Card/Card';
 import Creator from '../Creator/Creator';
+import Icon from '../Icon/Icon';
 
 import styles from './Column.scss';
 
@@ -37,7 +38,12 @@ export default class Column extends Component {
     render() {
         return (
             <section className={styles.component}>
-                <h3 className={styles.title}>{this.props.title}</h3>
+                <h3 className={styles.title}>
+                    <span className={styles.icon}>
+                        <Icon name={this.props.icon} />
+                    </span>
+                    {this.props.title}
+                </h3>
                 <div>
                     {this.state.cards.map(({ key, ...cardsProps }) => (
                         <Card key={key} {...cardsProps} />
