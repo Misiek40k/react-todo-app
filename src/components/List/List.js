@@ -22,27 +22,8 @@ export default class List extends Component {
         description: settings.defaultListDescription,
     }
 
-    state = {
-        columns: this.props.columns || [],
-    }
-
-    addColumn(title) {
-        this.setState(state => (
-            {
-                columns: [
-                    ...state.columns,
-                    {
-                        key: state.columns.length ? state.columns[state.columns.length - 1].key + 1 : 0,
-                        title,
-                        icon: 'list-alt',
-                        cards: [],
-                    },
-                ],
-            }
-        ));
-    }
-
     render() {
+        console.log(this.props);
         const { title, image, description, columns } = this.props;
         return (
             <section className={styles.component}>
@@ -51,6 +32,7 @@ export default class List extends Component {
                     {ReactHtmlParser(description)}
                 </div>
                 <div className={styles.columns}>
+                    {console.log(columns)}
                     {columns.map(columnData => (
                         <Column key={columnData.id} {...columnData} />
                     ))}

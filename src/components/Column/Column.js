@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import {settings} from '../../data/dataStore';
 
 import Card from '../Card/Card';
 // import Creator from '../Creator/Creator';
@@ -13,6 +14,10 @@ export default class Column extends Component {
         title: PropTypes.string,
         icon: PropTypes.string,
         cards: PropTypes.array,
+    }
+
+    static defaultProps = {
+        icon: settings.defaultColumnIcon,
     }
 
     render() {
