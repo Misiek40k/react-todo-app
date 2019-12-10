@@ -4,7 +4,7 @@ import { settings } from '../../data/dataStore';
 import ReactHtmlParser from 'react-html-parser';
 
 import Hero from '../Hero/Hero';
-import Column from '../Column/Column';
+import Column from '../Column/ColumnContainer';
 // import Creator from '../Creator/Creator';
 
 import styles from './List.scss';
