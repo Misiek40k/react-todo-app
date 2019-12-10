@@ -22,26 +22,6 @@ export default class List extends Component {
         description: settings.defaultListDescription,
     }
 
-    state = {
-        columns: this.props.columns || [],
-    }
-
-    addColumn(title) {
-        this.setState(state => (
-            {
-                columns: [
-                    ...state.columns,
-                    {
-                        key: state.columns.length ? state.columns[state.columns.length - 1].key + 1 : 0,
-                        title,
-                        icon: 'list-alt',
-                        cards: [],
-                    },
-                ],
-            }
-        ));
-    }
-
     render() {
         const { title, image, description, columns } = this.props;
         return (
