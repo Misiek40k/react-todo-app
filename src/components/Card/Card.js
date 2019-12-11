@@ -10,9 +10,10 @@ export default class Card extends Component {
     }
 
     render() {
+        const { title } = this.props;
         return (
             <div className={styles.component}>
-                <span>{this.props.title}</span>
+                <span>{title}</span>
             </div>
         );
     }
