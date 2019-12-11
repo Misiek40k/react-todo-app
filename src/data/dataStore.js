@@ -1,6 +1,7 @@
 export const settings = {
   columnCreatorText: 'Add new column',
   cardCreatorText: 'Add new card',
+  deleteCreatorText: 'Are you really want to delete this item ?',
   creator: {
     buttonOK: 'OK',
     buttonCancel: 'Cancel',
