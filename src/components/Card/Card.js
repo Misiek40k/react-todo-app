@@ -1,7 +1,7 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import styles from './Card.scss'
+import styles from './Card.scss';
 
 export default class Card extends Component {
 
@@ -14,6 +14,6 @@ export default class Card extends Component {
             <div className={styles.component}>
                 <span>{this.props.title}</span>
             </div>
-        )
+        );
     }
 }

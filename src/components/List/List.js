@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { settings } from '../../data/dataStore';
 
@@ -6,7 +6,7 @@ import Hero from '../Hero/Hero';
 import Column from '../Column/Column';
 import Creator from '../Creator/Creator';
 
-import styles from './List.scss'
+import styles from './List.scss';
 
 export default class List extends Component {
 
@@ -34,9 +34,9 @@ export default class List extends Component {
                         key: state.columns.length ? state.columns[state.columns.length - 1].key + 1 : 0,
                         title,
                         icon: 'list-alt',
-                        cards: []
-                    }
-                ]
+                        cards: [],
+                    },
+                ],
             }
         ));
     }
@@ -50,13 +50,13 @@ export default class List extends Component {
                 </div>
                 <div className={styles.columns}>
                     {this.state.columns.map(({ key, ...columnProps }) => (
-                        <Column key={key} {...columnProps}/>
+                        <Column key={key} {...columnProps} />
                     ))}
                 </div>
                 <div className={styles.creator}>
                     <Creator text={settings.cardCreatorText} action={title => this.addColumn(title)} />
                 </div>
             </section>
-        )
+        );
     }
 }

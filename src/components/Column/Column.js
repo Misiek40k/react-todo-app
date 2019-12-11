@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { settings } from '../../data/dataStore';
 
@@ -28,9 +28,9 @@ export default class Column extends Component {
                     {
                         key: state.cards.length ? state.cards[state.cards.length - 1].key + 1 : 0,
                         title,
-                        cards: []
-                    }
-                ]
+                        cards: [],
+                    },
+                ],
             }
         ));
     }
@@ -53,6 +53,6 @@ export default class Column extends Component {
                     <Creator text={settings.cardCreatorText} action={title => this.addCard(title)} />
                 </div>
             </section>
-        )
+        );
     }
 }
