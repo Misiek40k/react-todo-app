@@ -24,14 +24,14 @@ class Search extends React.Component {
         value: this.props.searchString,
     }
 
-    handleChange(event) {
+    handleChange = (event) => {
         this.setState({
             value: event.target.value,
             visibleButtons: event.target.value.length > 0,
         });
     }
 
-    handleOK() {
+    handleOK = () => {
         this.props.changeSearchString(this.state.value);
     }
 
@@ -52,9 +52,9 @@ class Search extends React.Component {
                         type='text'
                         placeholder={text}
                         value={value}
-                        onChange={event => this.handleChange(event)}
+                        onChange={this.handleChange}
                     />
-                    <Button onClick={() => this.handleOK()}><Icon name={icon} /></Button>
+                    <Button onClick={this.handleOK}><Icon name={icon} /></Button>
                     <div>
                         {countVisible == countAll ? '' : `${countVisible} / ${countAll}`}
                     </div>
