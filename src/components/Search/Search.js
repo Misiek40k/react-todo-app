@@ -24,7 +24,7 @@ class Search extends React.Component {
         value: this.props.searchString,
     }
 
-    handleChange = (event) => {
+    handleChange = event => {
         this.setState({
             value: event.target.value,
             visibleButtons: event.target.value.length > 0,
