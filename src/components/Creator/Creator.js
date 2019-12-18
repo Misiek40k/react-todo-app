@@ -22,7 +22,7 @@ export default class Creator extends Component {
         visibleButtons: false,
     }
 
-    handleChange(event) {
+    handleChange = event => {
         // console.log(event);
         this.setState({
             value: event.target.value,
@@ -30,7 +30,7 @@ export default class Creator extends Component {
         });
     }
 
-    handleOK() {
+    handleOK = () => {
         if (this.state.value !== '') {
             this.props.action(this.state.value);
             this.setState({
@@ -40,7 +40,7 @@ export default class Creator extends Component {
         }
     }
 
-    handleCancel() {
+    handleCancel = () => {
         if (window.confirm(settings.deleteCreatorText)) {
             this.setState({
                 value: '',
@@ -56,11 +56,11 @@ export default class Creator extends Component {
                     type='text'
                     placeholder={this.props.text}
                     value={this.state.value}
-                    onChange={event => this.handleChange(event)}
+                    onChange={this.handleChange}
                 />
                 <div className={styles.buttons + (this.state.visibleButtons ? ' ' + styles.buttonsShown : '')}>
-                    <Button onClick={() => this.handleOK()}>OK</Button>
-                    <Button onClick={() => this.handleCancel()} variant='danger'>cancel</Button>
+                    <Button onClick={this.handleOK}>OK</Button>
+                    <Button onClick={this.handleCancel} variant='danger'>cancel</Button>
                 </div>
             </div>
         );
