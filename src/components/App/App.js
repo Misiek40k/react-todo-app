@@ -6,6 +6,7 @@ import Home from '../Home/HomeContainer';
 import Info from '../Info/Info';
 import MainLayout from '../MainLayout/MainLayout';
 import Faq from '../Faq/Faq';
+import List from '../List/ListContainer';
 
 import styles from './App.scss';
 
@@ -21,6 +22,7 @@ const App = () => (
                 <Route exact path='/' component={Home} />
                 <Route exact path='/info' component={Info} />
                 <Route exact path='/faq' component={Faq} />
+                <Route exact path='/list/:id' component={List}/>
             </AnimatedSwitch>
         </MainLayout>
     </BrowserRouter>
